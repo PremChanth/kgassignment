@@ -1,0 +1,55 @@
+.fixed-open {
+    display: block;
+}
+::ng-deep .mat-typography h1{
+    margin: 0px;
+}
+
+.header{
+    font-size: 16px;
+    font-weight: 500;
+}
+.sub-header{
+    font-size: 12px;
+    font-weight: 200;
+    display: block;
+    margin-bottom: 15px;
+}
+.imgLeft{
+    float: left; margin-right: 10px;
+}
+
+.margin-right{
+    margin-right: 15px;
+}
+.margin-bottom{
+    margin-bottom: 15px;
+}
+
+.right{
+    float: right
+}
+.slot-block{
+    background-color: white;padding: 29px 20px;border-radius: 5px;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus, .btn-primary:active:focus {
+
+    background-color:  #3f51b5 !important;
+    color:whitesmoke;
+    border: 1px solid whitesmoke !important;
+    background: url(../../../../assets/arrow_forward-24px.svg) 1% no-repeat;
+
+}
+.btn-primary{
+    background-color: whitesmoke;
+    color:#3f51b5;
+    border: 1px solid #3f51b5 !important;
+    background: url(../../../../assets/circle.svg) 1% no-repeat;
+}
+.header-block{
+    display: flex; justify-content: space-between;height: 48%;
+}
+
+.btn-txt{
+    padding:0px 7px
+}

@@ -1,0 +1,39 @@
+<div>
+  <div class="add-title">
+    <h2 class="primary">Add slot</h2>
+  </div>
+  <div>
+    <form [formGroup]="addSlotForm">
+      <mat-grid-list cols="2" rowHeight="85px">
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field>
+              <mat-label>Start Time</mat-label>
+              <input matInput type="time"  formControlName="startTime" (change)="onStartTimeChange($event)" required>
+              <mat-error *ngIf="addSlotForm.controls.startTime.hasError('required')">
+                Please enter Start Time
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field class="example-full-width">
+              <mat-label>End Time</mat-label>
+              <input matInput type="time" formControlName="endTime" required readonly>
+              <!-- <mat-error *ngIf="addSlotForm.controls.endTime.hasError('required')">
+                Please enter End Time
+              </mat-error> -->
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>       
+      </mat-grid-list>
+
+      <div class="btn-sec">
+        <button mat-raised-button (click)="addSlot()" type="submit" color="primary" class="Update-btn">Add</button>
+        <button mat-raised-button (click)="cancel()" type="button" class="Discard-btn">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="header-block">
+  <div style="background-color: white; padding: 10px;">
+    <form>
+      <mat-calendar [selected]="seletedDate" (selectedChange)="onSelect($event)" style="width: 200px; height:200px;">
+      </mat-calendar>
+    </form>
+  </div>
+  <div style="width: 100%; margin-left: 15px; ">
+    <div class="margin-bottom slot-block">
+      <button mat-button color="primary" class="right" (click)="openAddSlotModel('morning')">+ Add
+        slots</button>
+      <p class="header">
+        <img src="../../../../assets/sun2.svg" class="imgLeft"> Morning
+        <span class="sub-header">9.00 AM to 12.00 PM</span>
+      </p>
+      <button  mat-raised-button  class="btn-primary margin-right" *ngFor="let item of morningSlots">
+       <span class="btn-txt">{{item.startTime | date : 'HH:mm a'}}</span></button>
+    </div>
+
+    <div class="slot-block">
+      <button mat-button color="primary" class="right" (click)="openAddSlotModel('evening')">+ Add
+        slots</button>
+        <p class="header">
+          <img src="../../../../assets/sun2.svg" class="imgLeft"> Evening 
+      <span class="sub-header" >5.00 PM to 9.00 PM</span>
+      <button mat-raised-button class="btn-primary margin-right" *ngFor="let item of eveningSlots" >
+      <span class="btn-txt">  {{item.startTime | date : 'HH:mm a'}}</span></button>
+    </div>
+  </div>
+</div>
